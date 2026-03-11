@@ -1,0 +1,414 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background-image:url("../img/fundo.jpg");
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+/* HOME */
+
+.container{
+text-align:center;
+}
+
+.nome{
+font-size:70px;
+color:#FFD700;
+text-shadow:
+0 0 10px gold,
+0 0 20px gold,
+0 0 40px orange;
+margin-bottom:10px;
+}
+
+.profissao{
+font-size:24px;
+letter-spacing:3px;
+margin-bottom:80px;
+color:#f0d28b;
+}
+
+.botoes{
+display:flex;
+flex-direction:column;
+gap:40px;
+}
+
+.btn{
+text-decoration:none;
+padding:20px 80px;
+font-size:26px;
+color:white;
+border:2px solid gold;
+background:rgba(0,0,50,0.6);
+box-shadow:
+0 0 10px gold,
+0 0 20px rgba(255,215,0,0.5),
+inset 0 0 10px rgba(255,215,0,0.3);
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+box-shadow:
+0 0 20px gold,
+0 0 40px orange;
+}
+
+/* PAGINA PROJETOS */
+
+.pagina-projetos{
+min-height:100vh;
+padding:80px 20px;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+.titulo-projetos{
+    width: 100%;
+    text-align: center;
+font-size:42px;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(2,300px);
+gap:40px;
+justify-content:center;
+}
+
+.card{
+width:300px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+border-radius:20px;
+padding:20px;
+text-align:center;
+transition:0.4s;
+position: relative;
+overflow: hidden;
+box-shadow: 0 0 15px rgba (255,255,0,0.2);
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:-100%;
+
+left:-100%;
+
+width:200%;
+
+height:200%;
+
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.4),
+transparent
+);
+
+transform:rotate(25deg);
+
+transition:0.6s;
+
+}
+
+.card img{
+width:100%;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 0 20px gold
+0 0 40px rgba(255,215,0,0.6);
+}
+.card:hover::before {
+top:100%;
+left:100%;
+}
+
+.voltar{
+position:absolute;
+top:30px;
+left:30px;
+
+text-decoration:none;
+color:#FFD700;
+font-size:18px;
+
+border:1px solid gold;
+padding:10px 20px;
+border-radius:10px;
+
+background:rgba(0,0,50,0.6);
+
+transition:0.3s;
+}
+
+.voltar:hover{
+box-shadow:0 0 10px gold;
+transform:scale(1.05);
+}
+
+.voltar{
+
+position:fixed;
+
+top:30px;
+left:30px;
+
+text-decoration:none;
+
+color:#FFD700;
+
+font-size:18px;
+
+padding:12px 22px;
+
+border:2px solid gold;
+
+border-radius:30px;
+
+background:rgba(0,0,40,0.6);
+
+backdrop-filter:blur(6px);
+
+box-shadow:
+0 0 10px gold,
+0 0 20px rgba(255,215,0,0.4);
+
+transition:0.3s;
+
+}
+
+.voltar:hover{
+
+transform:scale(1.08);
+
+box-shadow:
+0 0 20px gold,
+0 0 40px orange;
+}
+
+.pagina-contato{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+.contato{
+
+background:rgba(0,0,40,0.6);
+
+backdrop-filter:blur(10px);
+
+padding:40px;
+
+border-radius:20px;
+
+width:400px;
+
+text-align:center;
+
+box-shadow:
+0 0 20px rgba(255,215,0,0.4);
+
+}
+
+.titulo-contato{
+
+font-size:36px;
+
+margin-bottom:30px;
+
+}
+
+.formulario{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.formulario input,
+.formulario textarea{
+
+padding:15px;
+
+border:none;
+
+border-radius:10px;
+
+font-size:16px;
+
+}
+
+.btn-enviar{
+
+padding:15px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:10px;
+
+background:gold;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.btn-enviar:hover{
+
+background:orange;
+
+transform:scale(1.05);
+
+}
+
+.contatos-diretos{
+
+margin-top:30px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.contato-btn{
+
+text-decoration:none;
+
+padding:14px;
+
+border-radius:10px;
+
+font-size:18px;
+
+color:white;
+
+transition:0.3s;
+
+}
+
+.whatsapp{
+
+background:#25D366;
+
+}
+
+.email{
+
+background:#ea4335;
+
+}
+
+.linkedin{
+
+background:#0077b5;
+
+}
+
+.contato-btn:hover{
+
+transform:scale(1.05);
+
+}
+
+.whatsapp-float{
+
+    font-size: 32px;
+
+position:fixed;
+
+bottom:30px;
+
+right:30px;
+
+width:60px;
+
+height:60px;
+
+background:#25D366;
+
+color:white;
+
+font-size:30px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+text-decoration:none;
+
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+
+transition:0.3s;
+
+z-index:1000;
+
+animation:pulsar 2s infinite;
+}
+
+.whatsapp-float:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 20px #25D366;
+
+}
+
+@keyframes pulsar{
+  0%{
+    box-shadow:0 0 0 0 rgba(37,211,102,0.7);
+  }
+
+  70%{
+    box-shadow:0 0 0 20px rgba(37,211,102,0);
+  }
+
+  100%{
+    box-shadow:0 0 0 0 rgba(37,211,102,0);
+  }
+}
